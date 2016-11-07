@@ -1,0 +1,46 @@
+{{!-- The tag below includes the header - partials/header.hbs --}}
+{{> header}}
+
+{{!-- This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. --}}
+
+{{!-- Everything inside the #post tags pulls data from the page --}}
+{{#post}}
+
+<header class="main-header post-head
+    {{#if image}} grey colordodge" style="background-image: url({{url image}});
+    {{else if @settings.cover}} darkblue softlight" style="background-image: url({{url @settings.cover}});
+    {{else}}no-cover{{/if}}">
+    <nav class="main-nav overlay clearfix">
+        {{#if @settings.logo}}<a class="blog-logo" href="{{url}}"><img src="{{url @settings.logo}}" alt="{{@settings.title}}" /></a>{{/if}}
+        <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+    </nav>
+
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{@settings.title}}</h1>
+            <h2 class="page-description">{{title editable="true"}}</h2>
+        </div>
+    </div>
+</header>
+
+<main class="content" role="main">
+
+    {{> home-slideshow}}
+    {{!-- Use clearfix to ensure that the footer stays at the bottom --}}
+    <article class="{{post_class}} clearfix">
+
+        <section class="post-content">
+            {{content editable="true"}}
+        </section>
+
+    </article>
+    {{#is 'comments-allowed' 'in' tags}}
+        <div class="div-comments" id="div-comments" data-src="/comments/{{slug}}"></div>
+    {{/is}}
+    
+</main>
+{{/post}}
+
+{{!-- The tag below includes the footer - partials/footer.hbs --}}
+{{> footer}}

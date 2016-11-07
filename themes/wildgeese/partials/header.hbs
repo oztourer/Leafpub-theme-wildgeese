@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{@settings.title}} · {{#if this.post}}{{this.post.title}}
+	{{else if this.tag}}{{@meta.title}}
+	{{else if this.author}}Author {{this.author.name}}
+	{{else}}Blog{{/if}}
+    </title>
+    <meta name="description" content="{{@meta.description}}" />
+
+    {{!-- Postleaf metadata --}}
+    <meta name="postleaf:url" data-base="{{url}}">
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Favicon --}}
+    <link rel="shortcut icon" href="{{url @settings.favicon}}">
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{theme_url "assets/css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{theme_url "assets/lightbox/css/lightbox.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <!--link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"-->
+    <!--script src="http://www.w3schools.com/lib/w3data.js"></script-->
+
+    {{!-- Postleaf outputs important style and meta data with this tag --}}
+    {{postleaf_head}}
+</head>
+<body class="{{body_class}} nav-closed">
+
+    {{!-- The tag below includes the navigation - partials/navigation.hbs --}}
+    {{> navigation}}
+
+    <div class="site-wrapper">

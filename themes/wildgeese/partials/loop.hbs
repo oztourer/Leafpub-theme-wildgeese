@@ -1,0 +1,28 @@
+{{!-- Previous/next page links - only displayed on page 2+ --}}
+<div class="extra-pagination inner">
+    {{!-- The tag below includes the pagination - partials/pagination.hbs --}}
+    {{> pagination}}
+</div>
+
+{{!-- This is the post loop - each post will be output using this markup --}}
+{{#each posts}}
+<article class="{{post_class}}">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{post_url}}">{{title}}</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>{{excerpt words="26"}} <a class="read-more" href="{{post_url}}">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        {{#author}}
+        {{#if avatar}}<img class="author-thumb" src="{{url avatar}}" alt="{{name}}" nopin="nopin" />{{/if}}
+        {{name}}
+        {{/author}}
+        {{tags before=" on "}}
+        <time class="post-date" datetime="{{date format="%Y-%m-%d"}}">{{date format="%e %B %Y"}}</time>
+    </footer>
+</article>
+{{/each}}
+
+{{!-- The tag below includes the pagination - partials/pagination.hbs --}}
+{{> pagination}}

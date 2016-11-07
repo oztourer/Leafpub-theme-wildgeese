@@ -1,0 +1,25 @@
+<div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+
+    <div class="nav-search">
+        <form action="{{search_url}}" method="get" autocomplete="off">
+            <input type="search" name="s" placeholder="Search">
+        </form>
+    </div>
+
+    {{#navigation}}
+    <ul>
+        {{#each items}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url link}}">{{label}}</a></li>
+        {{/each}}
+    </ul>
+    {{/navigation}}
+
+    <a class="subscribe-button icon-feed" href="{{feed_url}}">Subscribe</a>
+
+    {{!--<a class="icon-facebook icon-button" href="https://www.facebook.com/groups/364234740412094/377251675777067" target="_blank" onclick="this.blur();" title="Our Facebook page"></a>--}}
+</div>
+<span class="nav-cover"></span>

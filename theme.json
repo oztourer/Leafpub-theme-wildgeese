@@ -1,0 +1,9 @@
+{
+    "name": "wildgeese",
+    "description": "A fork of the Casper theme by Steve Pike.",
+    "version": "1.0.0",
+    "requires": "1.0.0",
+    "author": "Steve Pike",
+    "license": "MIT",
+    "url": "https://github.com/oztourer/wildgeese"
+}

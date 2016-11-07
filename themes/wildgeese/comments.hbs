@@ -1,0 +1,62 @@
+{{!--
+    Only show the comments section if there are some comments for the page
+    or a user is signed in and can post comments, and this is the last page of comments.
+--}}
+
+{{#is comments '||' @user}}
+    <style type="text/css"> @import url("{{theme_url "assets/css/comments.css"}}"); </style>
+
+    <div class="comment-container inner clearfix">
+	<div class="comment-header">Comments</div>
+	{{> comment-list}}
+
+	{{#pagination}}
+	    <data-pages data-current="{{current_page}}" data-prev="{{previous_page_url}}" />
+	    {{#unless next_page_url}}
+		{{#is @user}}
+		    {{!--
+			Only allow logged in users to post comments,
+			and only below the last comment.
+		    --}}
+		    {{#is 'comments-closed' 'in' @root.post.tags}}
+			<div class="new-comment-placeholder">
+			    <span>Comments are closed for this topic</span>
+			</div>
+		    {{else}}
+			<div class="new-comment-placeholder" id="new-comment-placeholder" data-post="{{@root.post.slug}}">
+			    <span>Write a comment ...</span>
+			</div>
+			<div class="new-comment-entry">
+			    <textarea id="new-comment-text" class="new-comment-text"></textarea>
+			    <img class="author-thumb" 
+				{{#if @user.avatar}}
+				    src="{{url @user.avatar}}"
+				{{else}}
+				    src="{{theme_url 'assets/images/default-avatar.png'}}"
+				{{/if}}
+			    alt="{{name}}" />
+			    <div class="new-comment-cancel">Cancel</div>
+			    <div class="new-comment-add">Post comment</div>
+			</div>
+		    {{/is}}
+		{{/is}}
+	    {{/unless}}
+
+	    {{#is previous_page_url '||' next_page_url}}
+		<nav class="pagination" role="navigation">
+		    {{#if previous_page_url}}
+			<a class="newer-posts older-comments" href="#div-comments" data-url="{{previous_page_url}}">&larr; Older Comments</a>
+		    {{/if}}
+		    <span class="page-number">Page {{current_page}} of {{total_pages}}</span>
+		    {{#if next_page_url}}
+			<a class="older-posts newer-comments" href="#div-comments" data-url="{{next_page_url}}">Newer Comments &rarr;</a>
+		    {{/if}}
+		</nav>
+	    {{/is}}
+	{{/pagination}}
+
+
+	{{!-- Force next area of the page below this one --}}
+	<!--div class="clear"></div-->
+    </div>
+{{/is}}

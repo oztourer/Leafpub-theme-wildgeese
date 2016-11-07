@@ -1,0 +1,44 @@
+{{#if comments}}
+    {{!-- Show existing comments --}}
+    <div class="existing-comments">
+	{{#each comments}}
+	    <div class="existing-comment{{#is editable}} editable{{/is}}"
+		id="{{id}}" data-author="{{author_slug}}">
+		{{#is editable}}
+		    <div class="comment-options">
+			<span class="comment-options-menu">
+			    <span class="comment-options-icon" title="Options" style="background: url({{theme_url 'assets/images/ui_sprites.png'}}) no-repeat 0 -101px;"></span>
+			    <span class="arrow"></span>
+			    <ul class="comment-menu-items">
+				<li class="edit-comment">Edit</li>
+				<li class="delete-comment">Delete</li>
+			    </ul>
+			</span>
+		    </div>
+		{{/is}}
+		<div class="comment-author">
+		    <img class="author-thumb" 
+			{{#if avatar}}
+			    src="{{url avatar}}"
+			{{else}}
+			    src="{{theme_url 'assets/images/default-avatar.png'}}"
+			{{/if}}
+		    alt="{{name}}" />
+		    <strong>{{name}}</strong>
+		    <time class="comment-date" datetime="{{date format="%Y-%m-%d"}}">
+			wrote on {{date format="%e %B %Y"}}:
+		    </time>
+		</div>
+		<div class="current-comment">{{comment}}</div>
+	    </div>
+	{{/each}}
+    </div>
+
+    <div class="mod-comment-entry">
+	<textarea id="mod-comment-text" class="mod-comment-text"></textarea>
+	<div class="old-comment-cancel">Cancel</div>
+	<div class="old-comment-mod">Update comment</div>
+    </div>
+
+{{/if}}
+

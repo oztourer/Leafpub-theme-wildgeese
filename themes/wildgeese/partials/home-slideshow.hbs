@@ -1,0 +1,65 @@
+{{#is title 'motorcycle club'}}
+    <style type="text/css">
+	#slideshow {
+	    position:relative;
+	    max-height:166px;
+	    height:166px;
+	    max-width:530px;
+	    margin: 0 auto;
+	}
+
+	#slideshow img {
+	    position:absolute;
+	    top:0;
+	    left:0;
+	    z-index:-2;
+	    opacity: 0.0;
+	    filter: alpha(opacity=0);
+	    max-width: 100%;
+	    //max-width: 530px;
+	    max-height: 166px;
+	}
+
+	#slideshow img.active {
+	    z-index:1;
+	    opacity: 1.0;
+	    filter: alpha(opacity=100);
+	}
+
+	#slideshow img.last-active {
+	    z-index:-1;
+	}
+    </style>
+
+    <script language="javascript" type="text/javascript">
+	function slideSwitch() {
+	    var $active = $('#slideshow IMG.active');
+
+	    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+	    var $next =  $active.next().length ? $active.next()
+		: $('#slideshow IMG:first');
+
+	    $active.addClass('last-active');
+
+	    $next.css({opacity: 0.0})
+		.addClass('active')
+		.animate({opacity: 1.0}, 1000, function() {
+		    $active.removeClass('active last-active');
+		});
+	}
+    </script>
+
+    <div class="inner">
+      <div id="slideshow">
+	<img src="/content/uploads/blank.gif" data-src="/content/uploads/slides/0.jpg" alt="" class="lazy active" />
+	<img src="/content/uploads/blank.gif" data-src="/content/uploads/slides/1.jpg" alt="" class="lazy" />
+	<img src="/content/uploads/blank.gif" data-src="/content/uploads/slides/2.jpg" alt="" class="lazy" />
+	<img src="/content/uploads/blank.gif" data-src="/content/uploads/slides/3.jpg" alt="" class="lazy" />
+	<img src="/content/uploads/blank.gif" data-src="/content/uploads/slides/4.jpg" alt="" class="lazy" />
+	<img src="/content/uploads/blank.gif" data-src="/content/uploads/slides/5.jpg" alt="" class="lazy" />
+	<img src="/content/uploads/blank.gif" data-src="/content/uploads/slides/6.jpg" alt="" class="lazy" />
+	<img src="/content/uploads/blank.gif" data-src="/content/uploads/slides/7.jpg" alt="" class="lazy" />
+      </div>
+    </div>
+{{/is}}

@@ -1,0 +1,44 @@
+        {{!-- The tiny footer at the very bottom --}}
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="{{url}}">{{@settings.title}}</a> &copy; {{date format="%Y"}}</section>
+            <section class="poweredby">Proudly published with <a href="https://www.postleaf.org/">Postleaf</a></section>
+        </footer>
+
+    </div>
+
+    {{!-- jQuery needs to come before `{{postleaf_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    {{!-- If required, use Postleaf packaged jquery as it contains extra functions --}}
+    {{!--<script type="text/javascript" src="{{url 'source/assets/js/lib.min.js'}}?v={{@postleaf.version}}"></script>--}}
+
+    {{!-- Postleaf outputs important scripts and data with this tag --}}
+    {{postleaf_foot}}
+    {{!-- Fitvids makes video embeds responsive and awesome --}}
+    <script type="text/javascript" src="{{theme_url "assets/js/jquery.fitvids.min.js"}}"></script>
+    {{!-- Swipe support for mobile --}}
+    <script type="text/javascript" src="{{theme_url "assets/js/jquery.event.move.min.js"}}"></script>
+    <script type="text/javascript" src="{{theme_url "assets/js/jquery.event.swipe.min.js"}}"></script>
+    {{!-- Lazy load images --}}
+    <script type="text/javascript" src="{{theme_url "assets/js/lazyload.min.js"}}"></script>
+    {{!-- Support for Lightbox image viewing --}}
+    <script type='text/javascript' src="{{theme_url "assets/lightbox/js/lightbox.min.js"}}"></script>
+    {{!-- The main JavaScript file for the WildGeese theme --}}
+    <script type="text/javascript" src="{{theme_url "assets/js/index.js"}}"></script>
+    {{!-- Support for comments --}}
+    <script type='text/javascript' src="{{theme_url "assets/js/comments.js"}}"></script>
+
+    {{!-- Activate slideshow on front page --}}
+    {{#is @root.post.title 'motorcycle club'}}
+	<script language="javascript" type="text/javascript">
+	<!--
+	    (function ($, undefined) {
+		$(document).ready(function() {
+		    setInterval( "slideSwitch()", 5000 );
+		});
+	    })(jQuery);
+	--></script>
+
+    {{/is}}
+
+</body>
+</html>
