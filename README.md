@@ -13,6 +13,14 @@ Created by [Steve Pike](https://twitter.com/oztourer)
 - Copy the themes/wildgeese directory to the themese directory of your [Postleaf](https://github.com/Postleaf) installation.
 - Install [Postleaf](https://github.com/Postleaf) plugin [Comments](https://github.com/oztourer/Postleaf-comments) if you require comments support.
 
+## Comments support
+
+Pages and posts where comments are permitted must have the tag 'comments-allowed' set. No change to the page will be apparent to viewers who are not signed in until comments are added to the page. Signed in users will see a frame at the bottom of the page allowing a new comment to be created.
+
+Continue to display comments but prevent new comments by setting both tags 'comments-allowed' and 'comments-closed' for a page.
+
+Hide any existing comments for a page by removing tag 'comments-allowed' from that page.
+
 ## Versioning
 
 Postleaf is maintained under the [Semantic Versioning guidelines](http://semver.org/) and this plugin attempts to adhere to the same guidelines.
