@@ -1,15 +1,32 @@
-# WildGeese
+# <img src="https://www.postleaf.org/content/themes/postleaf/img/logo-color-text.svg" alt="Postleaf" width="300">
 
-A development of the Casper theme for Postleaf.
+**A development of the Casper theme for Postleaf.**
 
-## Copyright & License
+Created by [Steve Pike](https://twitter.com/oztourer)
 
-Copyright (c) 2016 [Steve Pike](https://twitter.com/oztourer)
-Released under the MIT License.
+## Development status
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+- Pages and posts support comments by registered users, but only where the tag 'comments-allowed' is specified for that page or post. A further tag, 'comments-closed', can be set to prevent further comments from being added to the page or post. At present neither tag is set up when the theme is installed, they need to be added manually in the admin page for tags.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+## Installation
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+- Copy the themes/wildgeese directory to the themese directory of your [Postleaf](https://github.com/Postleaf) installation.
+- Install [Postleaf](https://github.com/Postleaf) plugin [Comments](https://github.com/oztourer/Postleaf-comments) if you require comments support.
+
+## Versioning
+
+Postleaf is maintained under the [Semantic Versioning guidelines](http://semver.org/) and this plugin attempts to adhere to the same guidelines.
+
+## Developers
+
+**Steve Pike**
+
+- https://twitter.com/oztourer
+- https://github.com/oztourer
+
+## License
+
+© 2016 [Steve Pike](https://twitter.com/oztourer)
+
+This software is copyrighted. You may use it under the terms of the MIT license. See LICENSE for licensing details.
+

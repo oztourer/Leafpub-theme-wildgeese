@@ -20,25 +20,10 @@
     <script type="text/javascript" src="{{theme_url "assets/js/jquery.event.swipe.min.js"}}"></script>
     {{!-- Lazy load images --}}
     <script type="text/javascript" src="{{theme_url "assets/js/lazyload.min.js"}}"></script>
-    {{!-- Support for Lightbox image viewing --}}
-    <script type='text/javascript' src="{{theme_url "assets/lightbox/js/lightbox.min.js"}}"></script>
     {{!-- The main JavaScript file for the WildGeese theme --}}
     <script type="text/javascript" src="{{theme_url "assets/js/index.js"}}"></script>
     {{!-- Support for comments --}}
     <script type='text/javascript' src="{{theme_url "assets/js/comments.js"}}"></script>
-
-    {{!-- Activate slideshow on front page --}}
-    {{#is @root.post.title 'motorcycle club'}}
-	<script language="javascript" type="text/javascript">
-	<!--
-	    (function ($, undefined) {
-		$(document).ready(function() {
-		    setInterval( "slideSwitch()", 5000 );
-		});
-	    })(jQuery);
-	--></script>
-
-    {{/is}}
 
 </body>
 </html>

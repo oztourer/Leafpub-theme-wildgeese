@@ -1245,15 +1245,6 @@ body:not(.post-template, .page-template) .post-title {
     padding: 0.6em 0;
 }
 
-.lightbox-row {
-    text-align: center;
-}
-
-.post-content .lightbox-row img {
-    padding: 0.6em 4px;
-    display: unset;
-}
-
 .footnotes {
     font-style: italic;
     font-size: 1.3rem;
@@ -2147,17 +2138,13 @@ body:not(.homepage) .extra-pagination {
         margin-top: 0;
     }
 
-    .post-content img not .post-content .lightbox-row img {
+    .post-content img {
         padding: 0;
         width: calc(100% + 32px); /* expand width to image + margins */
         min-width: 0;
         max-width: 112%; /* fallback when calc doesn't work */
     }
     
-    .lightbox-row {
-	/*display: block;*/
-    }
-
     .post-meta {
         font-size: 1.3rem;
         margin-top: 1rem;
