@@ -1,6 +1,6 @@
-# <img src="https://www.postleaf.org/content/themes/postleaf/img/logo-color-text.svg" alt="Postleaf" width="300">
+# <img src="https://www.leafpub.org/content/themes/leafpub/img/logo-color-text.svg" alt="Leafpub" width="300">
 
-**A development of the Casper theme for Postleaf.**
+**A development of the Casper theme for Leafpub.**
 
 Created by [Steve Pike](https://twitter.com/oztourer)
 
@@ -10,8 +10,8 @@ Created by [Steve Pike](https://twitter.com/oztourer)
 
 ## Installation
 
-- Copy the themes/wildgeese directory to the themese directory of your [Postleaf](https://github.com/Postleaf) installation.
-- Install [Postleaf](https://github.com/Postleaf) plugin [Comments](https://github.com/oztourer/Postleaf-comments) if you require comments support.
+- Copy the themes/wildgeese directory to the themes directory of your [Leafpub](https://github.com/Leafpub) installation.
+- Install [Leafpub](https://github.com/Leafpub) plugin [Comments](https://github.com/oztourer/Leafpub-comments) if you require comments support.
 
 ## Comments support
 
@@ -23,7 +23,7 @@ Hide any existing comments for a page by removing tag 'comments-allowed' from th
 
 ## Versioning
 
-Postleaf is maintained under the [Semantic Versioning guidelines](http://semver.org/) and this plugin attempts to adhere to the same guidelines.
+Leafpub is maintained under the [Semantic Versioning guidelines](http://semver.org/) and this plugin attempts to adhere to the same guidelines.
 
 ## Developers
 

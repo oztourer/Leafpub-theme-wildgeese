@@ -2302,7 +2302,7 @@ body:not(.homepage) .extra-pagination {
 
 
 /* ==========================================================================
-    Required classes for alignment. We need these because Postleaf generates
+    Required classes for alignment. We need these because Leafpub generates
     classes instead of inline styles for alignment.
    ========================================================================== */
 

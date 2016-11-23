@@ -151,7 +151,7 @@ $(function() {
 		    reload_comments();
 		} else {
 		    // Show errors
-		    //Postleaf.highlightErrors('.settings-form', res.invalid);
+		    //Leafpub.highlightErrors('.settings-form', res.invalid);
 		    //$.alertable.alert(res.message);
 		    alert(res.message);
 		}
@@ -195,7 +195,7 @@ $(function() {
 		    cancel_comment_mod();
 		} else {
 		    // Show errors
-		    //Postleaf.highlightErrors('.settings-form', res.invalid);
+		    //Leafpub.highlightErrors('.settings-form', res.invalid);
 		    //$.alertable.alert(res.message);
 		    alert(res.message);
 		}
@@ -278,7 +278,7 @@ $(function() {
 		    });
 		} else {
 		    // Show errors
-		    //Postleaf.highlightErrors('.settings-form', res.invalid);
+		    //Leafpub.highlightErrors('.settings-form', res.invalid);
 		    //$.alertable.alert(res.message);
 		    alert(res.message);
 		}
