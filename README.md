@@ -1,4 +1,4 @@
-# <img src="https://www.leafpub.org/content/themes/leafpub/img/logo-color-text.svg" alt="Leafpub" width="300">
+# wildgeese
 
 **A development of the Casper theme for Leafpub.**
 
